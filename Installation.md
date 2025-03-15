@@ -174,10 +174,3 @@ This guide walks you through installing Asterisk, a powerful open-source PBX sys
     ```
 
 2.  **Edit Configuration Files:** Use a text editor (e.g., `nano`, `vim`) to edit the configuration files (e.g., `sip.conf`, `extensions.conf`) to set up your SIP trunks, extensions, dial plan, and other settings. *This is where you'll customize Asterisk to fit your specific needs.*
-
-## Important Notes:
-
-*   **Permissions:** Ensure you use `sudo` when required for commands that need administrative privileges.
-*   **Firewall:** Configure your firewall to allow SIP (port 5060 UDP and TCP), RTP (ports defined in `rtp.conf`), and any other necessary ports.
-*   **Documentation:** Refer to the official Asterisk documentation for detailed information on configuration options and applications:  [https://www.asterisk.org/documentation/](https://www.asterisk.org/documentation/)
-*   **Security:** Pay close attention to security. Use strong passwords, enable encryption (TLS), and configure your firewall to protect your Asterisk system.
