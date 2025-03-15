@@ -9,3 +9,8 @@ This project includes example configurations, setup guides, automation scripts, 
 ## Table of Contents
 
 1.  [Installation Guide](Installation.md)
+
+## Official Documentation:
+Refer to the official Asterisk documentation for detailed information on configuration options and applications:
+
+[https://www.asterisk.org/documentation/](https://www.asterisk.org/documentation/)
