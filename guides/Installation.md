@@ -1,21 +1,36 @@
-# Installing Asterisk 22.2.0 on Ubuntu 22.10
+# Installing Asterisk 22.2.0 on Ubuntu 22.04.2
 
-This guide walks you through installing Asterisk, a powerful open-source PBX system, on a fresh installation of Ubuntu 22.10.
+This guide walks you through installing Asterisk, a powerful open-source PBX system, on a fresh installation of Ubuntu 22.04.2.
 
 ## Step 1: Prepare Your System
 
-1.  **Fresh Ubuntu Installation:** Ensure you have a clean installation of Ubuntu 22.10 Server (or Desktop). This minimizes potential conflicts.
+1.  **Fresh Ubuntu Installation:** Ensure you have a clean installation of Ubuntu 22.04.2 Server.
 
 2.  **Update and Upgrade:** Open a terminal and run these commands to update the package lists and upgrade existing packages:
 
     ```bash
-    sudo apt update
-    sudo apt upgrade
+    sudo apt update && sudo apt upgrade -y
     ```
 
-    This ensures you have the latest versions of software and security updates.
+    This ensures you have the latest versions of software, security, and linux kernals.
 
-## Step 2: Download Asterisk
+3.  Install essentials:
+
+    ```bash
+     sudo apt install wget build-essential git subversion -y
+    ```
+
+4.  (Optional) Install DAHDI and LibPRI for analog lines or ISDN (WIP Need Help):
+
+    Download Tarballs
+
+    ```bash
+    cd ~
+    wget https://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
+    wget https://downloads.asterisk.org/pub/telephony/libpri/libpri-1-current.tar.gz
+    ```
+
+## Step 2: Download & Install Asterisk
 
 1.  **Navigate to Home Directory:** In the terminal, go to your home directory:
 
@@ -29,9 +44,7 @@ This guide walks you through installing Asterisk, a powerful open-source PBX sys
     wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-22.2.0.tar.gz
     ```
 
-## Step 3: Extract Asterisk
-
-1.  **Extract the Archive:** Extract the downloaded archive using the following command:
+3.  **Extract the Archive:** Extract the downloaded archive using the following command:
 
     ```bash
     tar -xvzf asterisk-22.2.0.tar.gz
@@ -39,138 +52,75 @@ This guide walks you through installing Asterisk, a powerful open-source PBX sys
 
     This creates a directory named `asterisk-22.2.0` in your home directory.
 
-## Step 4: Configure and Install Dependencies
-
-1.  **Navigate to Asterisk Directory:** Go into the extracted Asterisk directory:
+4.  **Navigate to Asterisk Directory:** Go into the extracted Asterisk directory:
 
     ```bash
     cd asterisk-22.2.0
     ```
 
-2.  **Run the Configure Script:** Execute the `configure` script to prepare the build environment:
+5.  **Install Asterisk Dependencies:**
 
     ```bash
-    ./configure
-    ```
-
-3.  **Resolve Dependencies (If Necessary):** If the `configure` script fails due to missing dependencies, you can use the provided script to install them. Run:
-
-    ```bash
-    sudo ./contrib/scripts/install_prereq install
+    sudo contrib/scripts/install_prereq install
     ```
 
     This script attempts to automatically install the required dependencies.
 
-4.  **Re-run Configure:** After resolving any dependencies, re-run the `configure` script:
+6.  **Make and Install:**
 
     ```bash
-    ./configure
+    sudo ./configure
     ```
 
-    It should now complete without errors.
-
-## Step 5: Configure Asterisk Modules
-
-1.  **Run `make menuselect`:** This command provides a text-based interface to select which Asterisk modules you want to install:
+    If all dependencies are install, and ./configure was successful, you'll see the Asterisk ASCII art
 
     ```bash
-    make menuselect
+    sudo make menuselect
     ```
 
-2.  **Select Modules:**
-
-    *   Use the arrow keys to navigate the menu.
-    *   Press the `Enter` key to select or deselect modules.
-    *   Pay special attention to the `Codec Translators` and `Channel Drivers` sections. Select the codecs and channel drivers appropriate for your setup (e.g., `chan_sip` for SIP, `codec_ulaw` and `codec_alaw` for common audio codecs).
-
-3.  **MP3 Support (Optional):** If you selected MP3 support, you'll need to run a separate script *after* the `make install` step (Step 8):
+    Enable / Disable modules - Default is fine
 
     ```bash
-    contrib/scripts/get_mp3_source.sh
+    sudo make
     ```
-
-## Step 6: Compile and Install Asterisk
-
-1.  **Compile Asterisk:** Run the `make` command to compile the Asterisk source code:
-
-    ```bash
-    make
-    ```
-
-    This process can take a while, depending on your system's hardware.
-
-2.  **Install Asterisk:** Install Asterisk using the following command:
 
     ```bash
     sudo make install
     ```
 
-    This copies the compiled binaries and libraries to their appropriate locations.
+    Installs the Asterisk system
 
-## Step 7: Install Sample Configuration Files and Documentation
-
-1.  **Install Sample Configuration Files:** Install sample configuration files using:
+7.  **(Optional) Make Samples, Documentation, and Startup:**
 
     ```bash
     sudo make samples
     ```
 
-    These sample files provide a good starting point for configuring your Asterisk system.
-
-2.  **Install Program Documentation:** Install program documentation using:
+    Generates sample files to use to get started
 
     ```bash
     sudo make progdocs
     ```
 
-3.  **Configure File Permissions:** Ensure correct file permissions using:
+    Generates asterisk program documentation
 
     ```bash
     sudo make config
     ```
 
-## Step 8: (If MP3 Selected) Install MP3 Codec
+    Makes Asterisk boot automatically at startup
 
-1.  **Get the MP3 Source**:
-    ```bash
-    contrib/scripts/get_mp3_source.sh
-    ```
-2.  Follow directions
-
-## Step 9: Start Asterisk
-
-1.  **Start Asterisk:** Start the Asterisk service using:
+8.  **Start & Verify Asterisk System**
 
     ```bash
     sudo systemctl start asterisk
     ```
 
-    (The older `/etc/init.d/asterisk start` method might still work, but `systemctl` is the preferred method on modern Ubuntu systems.)
-
-2.  **Check Asterisk Status:** Verify that Asterisk is running with:
+    Starts Asterisk daemon
 
     ```bash
     sudo systemctl status asterisk
     ```
 
-    (Again, the older `/etc/init.d/asterisk status` might work, but `systemctl` is preferred.)
-
-## Step 10: Access the Asterisk CLI
-
-1.  **Connect to the CLI:** Connect to the Asterisk command-line interface (CLI) using:
-
-    ```bash
-    sudo asterisk -rvvvvv
-    ```
-
-    The `-r` flag connects to a running Asterisk instance. The `vvvvv` increases the verbosity (debugging information).
-
-## Step 11: Configure Asterisk (Important!)
-
-1.  **Configuration Directory:** The main Asterisk configuration files are located in the `/etc/asterisk/` directory.
-
-    ```bash
-    cd /etc/asterisk/
-    ```
-
-2.  **Edit Configuration Files:** Use a text editor (e.g., `nano`, `vim`) to edit the configuration files (e.g., `sip.conf`, `extensions.conf`) to set up your SIP trunks, extensions, dial plan, and other settings. *This is where you'll customize Asterisk to fit your specific needs.*
+    Checks the status of the Asterisk daemon
+    Note: You may see a radius error, this can be ignored.
