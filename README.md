@@ -8,4 +8,4 @@ This project includes example configurations, setup guides, automation scripts, 
 
 ## Table of Contents
 
-1.  [Installation Guide](Installations.md)
+1.  [Installation Guide](Installation.md)
