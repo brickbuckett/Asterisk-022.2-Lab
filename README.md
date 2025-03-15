@@ -1,4 +1,4 @@
-# Beginner's Guide: Installing Asterisk 22.2.0 on Ubuntu 22.10
+# Installing Asterisk 22.2.0 on Ubuntu 22.10
 
 This guide walks you through installing Asterisk, a powerful open-source PBX system, on a fresh installation of Ubuntu 22.10.
 
