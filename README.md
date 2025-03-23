@@ -1,4 +1,4 @@
-# Asterisk 22.2.0 Guides
+# Asterisk 22.2.0 Lab
 
 ## Overview
 
