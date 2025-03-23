@@ -10,7 +10,14 @@ Please note: This git is meant to lab, learn and demonstrate Asterisk. This shou
 
 ## Table of Contents
 
-1.  [Installation](/guides/Installation.md)
+Guides
+[Installation](/guides/Installation.md)
+
+Configs
+[pjsip.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/pjsip.conf)
+[extensions.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/extensions.conf)
+[voicemail.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/voicemail.conf)
+[acl.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/acl.conf)
 
 ## Official Documentation:
 Refer to the official Asterisk documentation for detailed information on configuration options and applications:
