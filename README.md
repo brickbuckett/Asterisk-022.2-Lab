@@ -16,25 +16,27 @@ General guides for installing and configuring Asterisk and endpoints
 
 [Installation](/guides/Installation.md)
 
-[Securing Endpoints: Userpass Best Practices](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/guides/securing-endpoints-userpass.md)
+[Common Asterisk Commands](/guides/common-asterisk-commands)
 
-[Securing Endpoints: ACL Basics](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/guides/securing-endpoints-acl.md)
+[Securing Endpoints: Userpass Best Practices](/guides/securing-endpoints-userpass.md)
 
-[Device Config: MicroSIP](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/guides/micorsip.md)
+[Securing Endpoints: ACL Basics](/guides/securing-endpoints-acl.md)
 
-[Device Config: Snom M500]()
+[Device Config: MicroSIP](/guides/micorsip.md)
+
+Device Config: Snom M500
 
 **Configs**
 
 General configs to use as a guide. Includes in-line comments to explain elements and official documentation references
 
-[pjsip.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/pjsip.conf)
+[pjsip.conf](/configs/pjsip.conf)
 
-[extensions.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/extensions.conf)
+[extensions.conf](/configs/extensions.conf)
 
-[voicemail.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/voicemail.conf)
+[voicemail.conf](/configs/voicemail.conf)
 
-[acl.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/acl.conf)
+[acl.conf](/configs/acl.conf)
 
 ## Official Documentation:
 Refer to the official Asterisk documentation for detailed information on configuration options and applications:
