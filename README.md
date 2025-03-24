@@ -6,7 +6,7 @@ This project is a collection of configurations, scripts, and documentation for d
 
 This project includes example configurations, setup guides, automation scripts, and best practices for building a robust and scalable Asterisk environment.
 
-Please note: This git is meant to lab, learn and demonstrate Asterisk. This should not be followed for production environments and may lack security or features you need.
+_Please note: This git is meant to lab, document, and demonstrate Asterisk. This should not be followed for production environments and may lack security or features you need. As this is a work in progress, expect updates and more in-line comments as time marches on._
 
 ## Table of Contents
 
