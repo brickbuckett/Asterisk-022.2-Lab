@@ -36,6 +36,8 @@ General configs to use as a guide. Includes in-line comments to explain elements
 
 [voicemail.conf](/configs/voicemail.conf)
 
+[queues.conf](/configs/queues.conf)
+
 [acl.conf](/configs/acl.conf)
 
 ## Official Documentation:
