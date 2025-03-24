@@ -16,7 +16,7 @@ General guides for installing and configuring Asterisk and endpoints
 
 [Installation](/guides/Installation.md)
 
-[Common Asterisk Commands](/guides/common-asterisk-commands)
+[Common Asterisk Commands](/guides/common-asterisk-commands.md)
 
 [Securing Endpoints: Userpass Best Practices](/guides/securing-endpoints-userpass.md)
 
