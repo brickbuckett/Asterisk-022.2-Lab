@@ -14,7 +14,7 @@ Please note: This git is meant to lab, learn and demonstrate Asterisk. This shou
 
 [Installation](/guides/Installation.md)
 
-[Securing Endpoints: Userpass Best Practices]()
+[Securing Endpoints: Userpass Best Practices](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/guides/securing-endpoints-userpass.md)
 
 [Securing Endpoints: ACL Basics](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/guides/securing-endpoints-acl.md)
 
