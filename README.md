@@ -10,12 +10,14 @@ Please note: This git is meant to lab, learn and demonstrate Asterisk. This shou
 
 ## Table of Contents
 
-Guides
+**Guides**
+
 [Installation](/guides/Installation.md)
 
 [Securing Endpoints: ACL Basics](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/guides/securing-endpoints-acl.md)
 
-Configs
+**Configs**
+
 [pjsip.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/pjsip.conf)
 
 [extensions.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/extensions.conf)
