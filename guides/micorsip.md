@@ -1,4 +1,4 @@
-# MicroSIP Softphone 3.21.6 Setup
+# Device Config: MicroSIP
 
 This simple guide is written for MicroSIP 3.21.6, however, it's not likely the fields will change and should work with just about any verison.
 
