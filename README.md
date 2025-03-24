@@ -8,9 +8,11 @@ This project includes example configurations, setup guides, scripts, and best pr
 
 _Please note: This git is meant to lab, document, and demonstrate Asterisk. This should not be followed for production environments and may lack security or features you need. As this is a work in progress, expect updates and more in-line comments as time marches on._
 
-## Table of Contents
+## Project Contents
 
 **Guides**
+
+General guides for installing and configuring Asterisk and endpoints
 
 [Installation](/guides/Installation.md)
 
@@ -18,7 +20,13 @@ _Please note: This git is meant to lab, document, and demonstrate Asterisk. This
 
 [Securing Endpoints: ACL Basics](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/guides/securing-endpoints-acl.md)
 
+[Device Config: MicroSIP]()
+
+[Device Config: Snom M500]()
+
 **Configs**
+
+General configs to use as a guide. Includes in-line comments to explain elements and official documentation references
 
 [pjsip.conf](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/configs/pjsip.conf)
 
