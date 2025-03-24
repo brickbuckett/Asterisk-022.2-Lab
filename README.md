@@ -20,7 +20,7 @@ General guides for installing and configuring Asterisk and endpoints
 
 [Securing Endpoints: ACL Basics](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/guides/securing-endpoints-acl.md)
 
-[Device Config: MicroSIP]()
+[Device Config: MicroSIP](https://github.com/brickbuckett/Asterisk-022.2-Lab/blob/main/guides/micorsip.md)
 
 [Device Config: Snom M500]()
 
