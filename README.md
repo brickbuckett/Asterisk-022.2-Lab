@@ -22,7 +22,7 @@ General guides for installing and configuring Asterisk and endpoints
 
 [Securing Endpoints: ACL Basics](/guides/securing-endpoints-acl.md)
 
-Asterisk REST Interface (ARI): Basic Setup & First Postman
+[Asterisk REST Interface (ARI): Basic Setup & First Postman](/guides/ari-basic.md)
 
 Asterisk REST Interface (ARI): Secured Setup
 
