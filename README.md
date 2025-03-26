@@ -4,8 +4,6 @@
 
 This project is a collection of configurations, scripts, and documentation for deploying and managing an Asterisk-based telephony system. It's designed to be a resource for both beginners and experienced Asterisk administrators.
 
-This project includes example configurations, setup guides, scripts, and best practices for getting started with Asterisk.
-
 _Please note: This git is meant to lab, document, and demonstrate Asterisk. This should not be followed for production environments and may lack security or features you need. As this is a work in progress, expect updates and more in-line comments as time marches on._
 
 ## Project Contents
